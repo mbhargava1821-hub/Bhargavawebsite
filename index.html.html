@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhargava Education Sphere</title>
+
+<style>
+:root {
+    --blue1: #004a99;
+    --blue2: #0066cc;
+    --purple1: #6c5ce7;
+    --purple2: #8e7bff;
+    --wa: #25D366;
+    --map: #34a853;
+    --bg: #f1f2f6;
+    --text: #2d3436;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LAYOUT */
+.wrapper {
+    display: flex;
+    gap: 18px;
+    width: 95%;
+    max-width: 850px;
+}
+
+/* MAIN CARD */
+.app-card {
+    background: white;
+    flex: 1;
+    border-radius: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* SIDE CARD */
+.side-card {
+    width: 280px;
+    background: linear-gradient(135deg, var(--purple1), var(--purple2));
+    color: white;
+    border-radius: 22px;
+    padding: 26px 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-card h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.side-card p {
+    font-size: 14px;
+    margin: 10px 0 18px;
+    opacity: 0.95;
+}
+
+.side-card .list {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.side-card .highlight {
+    background: rgba(255,255,255,0.22);
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* BOOK BUTTON */
+.book-btn {
+    background: #00cec9;
+    color: #003333;
+    padding: 14px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    transform: translateY(-2px);
+    background: #00b8b1;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, var(--blue1), var(--blue2));
+    color: white;
+    padding: 35px 20px 25px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* CONTENT */
+.content {
+    padding: 22px;
+    text-align: center;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.role {
+    font-size: 15px;
+    color: #636e72;
+    margin-bottom: 8px;
+}
+
+.rating {
+    color: #f39c12;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    background: #ff7675;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.box {
+    background: #eef4ff;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.address {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    border-left: 4px solid var(--blue1);
+    margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.call { background: var(--blue1); }
+.wa { background: var(--wa); }
+.map { background: var(--map); }
+
+/* FOOTER */
+footer {
+    font-size: 12px;
+    color: #b2bec3;
+    padding: 10px 0 16px;
+    text-align: center;
+}
+
+/* FLOATING WHATSAPP */
+.floating-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: var(--wa);
+    color: white;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .side-card {
+        width: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- MAIN COACHING -->
+    <div class="app-card">
+        <div class="header">
+            <h1>Bhargava Education Sphere</h1>
+            <p>Quality Science Education</p>
+        </div>
+
+        <div class="content">
+            <div class="name">Mohit Bhargava</div>
+            <div class="role">Science Specialist</div>
+            <div class="rating">⭐⭐⭐⭐⭐ Trusted by Parents & Students</div>
+
+            <div class="badge">🎯 Free Demo Class Available</div>
+
+            <div class="box">
+                🎓 <strong>Classes:</strong> 6th – 12th<br>
+                📘 <strong>Subjects:</strong> Physics, Chemistry, Biology
+            </div>
+
+            <div class="address">
+                📍 <strong>Coaching Location:</strong><br>
+                Back of Ganesh Garden, Krishnani Nagar,<br>
+                Bhullan Pura, Guna (M.P.)
+            </div>
+
+            <div class="address">
+                ⏰ <strong>Timings:</strong><br>
+                Mon – Sat: 4:00 PM – 8:00 PM
+            </div>
+
+            <a href="tel:7974162295" class="btn call">📞 Call Now</a>
+            <a href="https://wa.me/917974162295" class="btn wa">💬 Message on WhatsApp</a>
+            <a href="https://maps.app.goo.gl/NB4QQ4sSp6Xq4kWb8" target="_blank" class="btn map">
+                📍 Open in Google Maps
+            </a>
+        </div>
+
+        <footer>© 2026 Bhargava Education Sphere</footer>
+    </div>
+
+    <!-- HOME TUITION -->
+    <div class="side-card">
+        <h2>🏠 Home Tuition Group</h2>
+        <p>Experienced & verified teachers</p>
+
+        <div class="list">
+            ✔ Classes: <strong>2nd – 10th</strong><br>
+            ✔ All Subjects Covered<br>
+            ✔ Personal Home Tutor<br>
+            ✔ Regular Tests & Feedback
+        </div>
+
+        <div class="highlight">
+            Available in Guna City
+        </div>
+
+        <a href="https://wa.me/917974162295?text=Hello,%20I%20want%20to%20book%20a%20home%20tutor%20for%20my%20child."
+           class="book-btn" target="_blank">
+            📝 Book Home Tutor
+        </a>
+    </div>
+
+</div>
+
+<a href="https://wa.me/917974162295" class="floating-wa" target="_blank">💬</a>
+
+</body>
+</html>
