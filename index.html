@@ -1,211 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="google-site-verification" content="<meta name="google-site-verification" content="XGusfN-bDXtiZmb1Eo7niObYG5USW4ON2T9fQfBjx-A" />">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhargava Education Sphere</title>
+
+<title>Bhargava Education Sphere – Best Coaching in Guna</title>
+
+<meta name="description" content="Bhargava Education Sphere is the best coaching institute in Guna for classes 5th to 12th. All subjects, science specialist, and home tuition with male and female tutors.">
+<meta name="keywords" content="coaching in guna, science coaching guna, home tuition guna, best coaching classes guna, bhargava education sphere">
+<meta name="author" content="Bhargava Education Sphere">
+
+<meta property="og:title" content="Bhargava Education Sphere – Best Coaching in Guna">
+<meta property="og:description" content="Best coaching and home tuition in Guna for 5th to 12th class.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mbhargava1821-hub.github.io/Bhargavawebsite/">
+<meta property="og:image" content="https://mbhargava1821-hub.github.io/Bhargavawebsite/logo.png">
 
 <style>
 :root{
---blue1:#004a99;
---blue2:#0066cc;
---purple1:#6c5ce7;
---purple2:#8e7bff;
---wa:#25D366;
---map:#34a853;
---bg:#f1f2f6;
---card:#ffffff;
---text:#2d3436;
+--blue1:#004a99;--blue2:#0066cc;--purple1:#6c5ce7;--purple2:#8e7bff;
+--wa:#25D366;--map:#34a853;--bg:#f1f2f6;--card:#ffffff;--text:#2d3436;
 }
-
-body.dark{
---bg:#121212;
---card:#1e1e1e;
---text:#f1f2f6;
-}
+body.dark{--bg:#121212;--card:#1e1e1e;--text:#f1f2f6;}
 
 body{
-margin:0;
-font-family:Segoe UI,Arial;
+margin:0;font-family:Segoe UI,Arial;
 background:linear-gradient(135deg,#e0e7ff,#f8f9ff);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+min-height:100vh;display:flex;justify-content:center;align-items:center;
 transition:.4s;
 }
+body.dark{background:linear-gradient(135deg,#0f0f0f,#1b1b1b);}
 
-body.dark{
-background:linear-gradient(135deg,#0f0f0f,#1b1b1b);
-}
+.toggle{position:fixed;top:15px;right:15px;padding:8px 14px;border-radius:20px;border:none;cursor:pointer;}
 
-/* toggle */
-.toggle{
-position:fixed;
-top:15px;
-right:15px;
-padding:8px 14px;
-border-radius:20px;
-border:none;
-cursor:pointer;
-z-index:999;
-}
-.wrapper{
-display:flex;
-gap:20px;
-width:95%;
-max-width:900px;
-animation:fade 1s ease;
-}
-@keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;}
-}
+.wrapper{display:flex;gap:20px;width:95%;max-width:900px;animation:fade 1s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(30px);}to{opacity:1;}}
 
-.app-card{
-background:var(--card);
-flex:1;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-overflow:hidden;
-}
+.app-card{background:var(--card);flex:1;border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,0.2);overflow:hidden;}
 
-/* header */
-.header{
-background:linear-gradient(135deg,var(--blue1),var(--blue2));
-color:white;
-padding:30px 20px;
-text-align:center;
-}
-.logo{
-width:90px;height:90px;
-border-radius:50%;
-background:white;
-margin:0 auto 10px;
-overflow:hidden;
-}
-.logo img{
-width:100%;height:100%;object-fit:cover;
-}
+.header{background:linear-gradient(135deg,var(--blue1),var(--blue2));color:white;padding:30px;text-align:center;}
+.logo{width:90px;height:90px;border-radius:50%;background:white;margin:0 auto 10px;overflow:hidden;}
+.logo img{width:100%;height:100%;object-fit:cover;}
 
-/* content */
-.content{
-padding:22px;
-text-align:center;
-color:var(--text);
-}
-.badge{
-background:#ff7675;
-color:white;
-padding:6px 16px;
-border-radius:20px;
-display:inline-block;
-margin:10px 0;
-}
-.box,.address,.qr-box{
-background:#eef4ff;
-padding:14px;
-border-radius:12px;
-margin-bottom:12px;
-}
-body.dark .box,body.dark .address,body.dark .qr-box{
-background:#2b2b2b;
-}
+.content{padding:22px;text-align:center;color:var(--text);}
+.badge{background:#ff7675;color:white;padding:6px 16px;border-radius:20px;display:inline-block;margin:10px 0;}
+.box,.address,.qr-box{background:#eef4ff;padding:14px;border-radius:12px;margin-bottom:12px;}
+body.dark .box,body.dark .address,body.dark .qr-box{background:#2b2b2b;}
 
-.btn{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:15px;
-border-radius:14px;
-font-size:16px;
-font-weight:600;
-color:white;
-text-decoration:none;
-margin-bottom:10px;
-transition:.3s;
-}
+.btn{display:flex;justify-content:center;align-items:center;padding:15px;border-radius:14px;font-size:16px;font-weight:600;color:white;text-decoration:none;margin-bottom:10px;transition:.3s;}
 .btn:hover{transform:scale(1.05);}
-.call{background:var(--blue1);}
-.wa{background:var(--wa);}
-.map{background:var(--map);}
+.call{background:var(--blue1);} .wa{background:var(--wa);} .map{background:var(--map);}
 
-/* admission form */
-.form-box{
-background:#fff3;
-padding:15px;
-border-radius:14px;
-margin-top:15px;
-}
-.form-box input, .form-box select{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:14px;
-}
-.form-box button{
-background:#00cec9;
-border:none;
-padding:12px;
-width:100%;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
+.form-box{background:#ffffff22;padding:15px;border-radius:14px;margin-top:15px;}
+.form-box input,.form-box select{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;}
+.form-box button{background:#00cec9;border:none;padding:12px;width:100%;border-radius:10px;font-weight:bold;}
 
-/* side */
-.side-card{
-width:280px;
-background:linear-gradient(135deg,var(--purple1),var(--purple2));
-color:white;
-border-radius:22px;
-padding:26px 22px;
-text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-}
-.highlight{
-background:rgba(255,255,255,0.2);
-padding:12px;
-border-radius:14px;
-margin:12px 0;
-}
-.book-btn{
-background:#00cec9;
-color:#003333;
-padding:14px;
-border-radius:16px;
-text-decoration:none;
-font-weight:700;
-}
+.side-card{width:280px;background:linear-gradient(135deg,var(--purple1),var(--purple2));color:white;border-radius:22px;padding:26px 22px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,0.2);}
+.highlight{background:rgba(255,255,255,0.2);padding:12px;border-radius:14px;margin:12px 0;}
+.book-btn{background:#00cec9;color:#003333;padding:14px;border-radius:16px;text-decoration:none;font-weight:700;}
 
-/* floating whatsapp */
-.floating-wa{
-position:fixed;
-bottom:20px;
-right:20px;
-width:55px;height:55px;
-background:var(--wa);
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:26px;
-color:white;
-text-decoration:none;
-animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
-70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
-}
+.floating-wa{position:fixed;bottom:20px;right:20px;width:55px;height:55px;background:var(--wa);border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:26px;color:white;text-decoration:none;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
 
-@media(max-width:768px){
-.wrapper{flex-direction:column;}
-.side-card{width:auto;}
-}
+@media(max-width:768px){.wrapper{flex-direction:column;}.side-card{width:auto;}}
 </style>
 </head>
 
@@ -217,8 +76,8 @@ animation:pulse 1.5s infinite;
 
 <div class="app-card">
 <div class="header">
-<h1>Bhargava Education Sphere</h1>
-<p>Best in the City for Quality Education</p>
+<h1>Bhargava Education Sphere – Best Coaching in Guna</h1>
+<p>Science & All Subjects Coaching for 5th to 12th</p>
 </div>
 
 <div class="content">
@@ -226,9 +85,8 @@ animation:pulse 1.5s infinite;
 
 <div class="box">
 🎓 Classes: 5th – 12th (All Subjects)<br>
-📘 9th & 10th: Science Specialist<br>(PHYSICS / CHEMISTRY / BIOLOGY)<BR>
+📘 9th & 10th: <b>SCIENCE</b> Specialist<br>(PHYSICS / CHEMISTRY / BIOLOGY)<BR>
 </div>
-
 <div class="address">
 📍 Back of Ganesh Garden, Krishnani Nagar,<br>
 Bhullan Pura, Guna (M.P.)
@@ -244,10 +102,9 @@ Bhullan Pura, Guna (M.P.)
 
 <div class="qr-box">
 <h3>📱 Scan QR to Contact</h3>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/917974162295">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://mbhargava1821-hub.github.io/Bhargavawebsite/">
 </div>
 
-<!-- ADMISSION FORM -->
 <div class="form-box">
 <h3>📝 Admission Enquiry</h3>
 <form onsubmit="sendWhatsApp(); return false;">
@@ -261,6 +118,10 @@ Bhullan Pura, Guna (M.P.)
 <button type="submit">Submit on WhatsApp</button>
 </form>
 </div>
+
+<p style="font-size:13px;opacity:0.7;">
+Bhargava Education Sphere is one of the best coaching institutes in Guna (Madhya Pradesh) providing classes from 5th to 12th for all subjects including Physics, Chemistry and Biology. We also provide home tuition in Guna with experienced male and female tutors.
+</p>
 
 </div>
 </div>
@@ -282,16 +143,13 @@ Bhullan Pura, Guna (M.P.)
 <a href="https://wa.me/917974162295" class="floating-wa">💬</a>
 
 <script>
-function toggleDark(){
-document.body.classList.toggle("dark");
-}
+function toggleDark(){document.body.classList.toggle("dark");}
 
 function sendWhatsApp(){
 let name=document.getElementById("name").value;
 let cls=document.getElementById("class").value;
 let phone=document.getElementById("phone").value;
 let type=document.getElementById("type").value;
-
 let msg=`Admission Enquiry%0AName: ${name}%0AClass: ${cls}%0APhone: ${phone}%0AType: ${type}`;
 window.open("https://wa.me/917974162295?text="+msg,"_blank");
 }
