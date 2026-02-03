@@ -6,304 +6,296 @@
 <title>Bhargava Education Sphere</title>
 
 <style>
-:root {
-    --blue1: #004a99;
-    --blue2: #0066cc;
-    --purple1: #6c5ce7;
-    --purple2: #8e7bff;
-    --wa: #25D366;
-    --map: #34a853;
-    --bg: #f1f2f6;
-    --text: #2d3436;
+:root{
+--blue1:#004a99;
+--blue2:#0066cc;
+--purple1:#6c5ce7;
+--purple2:#8e7bff;
+--wa:#25D366;
+--map:#34a853;
+--bg:#f1f2f6;
+--card:#ffffff;
+--text:#2d3436;
 }
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: var(--bg);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body.dark{
+--bg:#121212;
+--card:#1e1e1e;
+--text:#f1f2f6;
 }
 
-/* LAYOUT */
-.wrapper {
-    display: flex;
-    gap: 18px;
-    width: 95%;
-    max-width: 850px;
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:linear-gradient(135deg,#e0e7ff,#f8f9ff);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:.4s;
 }
 
-/* MAIN CARD */
-.app-card {
-    background: white;
-    flex: 1;
-    border-radius: 22px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    overflow: hidden;
+body.dark{
+background:linear-gradient(135deg,#0f0f0f,#1b1b1b);
 }
 
-/* SIDE CARD */
-.side-card {
-    width: 280px;
-    background: linear-gradient(135deg, var(--purple1), var(--purple2));
-    color: white;
-    border-radius: 22px;
-    padding: 26px 22px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* toggle */
+.toggle{
+position:fixed;
+top:15px;
+right:15px;
+padding:8px 14px;
+border-radius:20px;
+border:none;
+cursor:pointer;
+z-index:999;
+}
+.wrapper{
+display:flex;
+gap:20px;
+width:95%;
+max-width:900px;
+animation:fade 1s ease;
+}
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;}
 }
 
-.side-card h2 {
-    margin: 0;
-    font-size: 20px;
+.app-card{
+background:var(--card);
+flex:1;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+overflow:hidden;
 }
 
-.side-card p {
-    font-size: 14px;
-    margin: 10px 0 18px;
-    opacity: 0.95;
+/* header */
+.header{
+background:linear-gradient(135deg,var(--blue1),var(--blue2));
+color:white;
+padding:30px 20px;
+text-align:center;
+}
+.logo{
+width:90px;height:90px;
+border-radius:50%;
+background:white;
+margin:0 auto 10px;
+overflow:hidden;
+}
+.logo img{
+width:100%;height:100%;object-fit:cover;
 }
 
-.side-card .list {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 18px;
+/* content */
+.content{
+padding:22px;
+text-align:center;
+color:var(--text);
+}
+.badge{
+background:#ff7675;
+color:white;
+padding:6px 16px;
+border-radius:20px;
+display:inline-block;
+margin:10px 0;
+}
+.box,.address,.qr-box{
+background:#eef4ff;
+padding:14px;
+border-radius:12px;
+margin-bottom:12px;
+}
+body.dark .box,body.dark .address,body.dark .qr-box{
+background:#2b2b2b;
 }
 
-.side-card .highlight {
-    background: rgba(255,255,255,0.22);
-    padding: 12px;
-    border-radius: 14px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
+.btn{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+border-radius:14px;
+font-size:16px;
+font-weight:600;
+color:white;
+text-decoration:none;
+margin-bottom:10px;
+transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
+.call{background:var(--blue1);}
+.wa{background:var(--wa);}
+.map{background:var(--map);}
+
+/* admission form */
+.form-box{
+background:#fff3;
+padding:15px;
+border-radius:14px;
+margin-top:15px;
+}
+.form-box input, .form-box select{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+}
+.form-box button{
+background:#00cec9;
+border:none;
+padding:12px;
+width:100%;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* BOOK BUTTON */
-.book-btn {
-    background: #00cec9;
-    color: #003333;
-    padding: 14px;
-    border-radius: 16px;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
+/* side */
+.side-card{
+width:280px;
+background:linear-gradient(135deg,var(--purple1),var(--purple2));
+color:white;
+border-radius:22px;
+padding:26px 22px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+.highlight{
+background:rgba(255,255,255,0.2);
+padding:12px;
+border-radius:14px;
+margin:12px 0;
+}
+.book-btn{
+background:#00cec9;
+color:#003333;
+padding:14px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
 }
 
-.book-btn:hover {
-    transform: translateY(-2px);
-    background: #00b8b1;
+/* floating whatsapp */
+.floating-wa{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;height:55px;
+background:var(--wa);
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:26px;
+color:white;
+text-decoration:none;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
-/* HEADER */
-.header {
-    background: linear-gradient(135deg, var(--blue1), var(--blue2));
-    color: white;
-    padding: 35px 20px 25px;
-    text-align: center;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.header p {
-    margin-top: 6px;
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* CONTENT */
-.content {
-    padding: 22px;
-    text-align: center;
-}
-
-.name {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--text);
-}
-
-.role {
-    font-size: 15px;
-    color: #636e72;
-    margin-bottom: 8px;
-}
-
-.rating {
-    color: #f39c12;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.badge {
-    display: inline-block;
-    background: #ff7675;
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 18px;
-}
-
-.box {
-    background: #eef4ff;
-    padding: 14px;
-    border-radius: 12px;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.address {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 14px;
-    border-left: 4px solid var(--blue1);
-    margin-bottom: 18px;
-}
-
-/* BUTTONS */
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    border-radius: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 12px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.95;
-}
-
-.call { background: var(--blue1); }
-.wa { background: var(--wa); }
-.map { background: var(--map); }
-
-/* FOOTER */
-footer {
-    font-size: 12px;
-    color: #b2bec3;
-    padding: 10px 0 16px;
-    text-align: center;
-}
-
-/* FLOATING WHATSAPP */
-.floating-wa {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-    background: var(--wa);
-    color: white;
-    border-radius: 50%;
-    font-size: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
-    }
-    .side-card {
-        width: auto;
-    }
+@media(max-width:768px){
+.wrapper{flex-direction:column;}
+.side-card{width:auto;}
 }
 </style>
 </head>
 
 <body>
 
+<button class="toggle" onclick="toggleDark()">🌙 Dark</button>
+
 <div class="wrapper">
 
-    <!-- MAIN COACHING -->
-    <div class="app-card">
-        <div class="header">
-            <h1>Bhargava Education Sphere</h1>
-            <p>Quality Science Education</p>
-        </div>
+<div class="app-card">
+<div class="header">
+<h1>Bhargava Education Sphere</h1>
+<p>Best in the City for Quality Education</p>
+</div>
 
-        <div class="content">
-            <div class="name">Mohit Bhargava</div>
-            <div class="role">Science Specialist</div>
-            <div class="rating">⭐⭐⭐⭐⭐ Trusted by Parents & Students</div>
+<div class="content">
+<div class="badge">🎯 Free Demo Class Available</div>
 
-            <div class="badge">🎯 Free Demo Class Available</div>
+<div class="box">
+🎓 Classes: 5th – 12th (All Subjects)<br>
+📘 9th & 10th: Science Specialist<br>(PHYSICS / CHEMISTRY / BIOLOGY)<BR>
+</div>
 
-            <div class="box">
-                🎓 <strong>Classes:</strong> 6th – 12th<br>
-                📘 <strong>Subjects:</strong> Physics, Chemistry, Biology
-            </div>
+<div class="address">
+📍 Back of Ganesh Garden, Krishnani Nagar,<br>
+Bhullan Pura, Guna (M.P.)
+</div>
 
-            <div class="address">
-                📍 <strong>Coaching Location:</strong><br>
-                Back of Ganesh Garden, Krishnani Nagar,<br>
-                Bhullan Pura, Guna (M.P.)
-            </div>
+<div class="address">
+⏰ Mon – Sat: 4:00 PM – 8:00 PM
+</div>
 
-            <div class="address">
-                ⏰ <strong>Timings:</strong><br>
-                Mon – Sat: 4:00 PM – 8:00 PM
-            </div>
+<a href="tel:7974162295" class="btn call">📞 Call Now</a>
+<a href="https://wa.me/917974162295" class="btn wa">💬 WhatsApp</a>
+<a href="https://maps.app.goo.gl/NB4QQ4sSp6Xq4kWb8" class="btn map" target="_blank">📍 Open Map</a>
 
-            <a href="tel:7974162295" class="btn call">📞 Call Now</a>
-            <a href="https://wa.me/917974162295" class="btn wa">💬 Message on WhatsApp</a>
-            <a href="https://maps.app.goo.gl/NB4QQ4sSp6Xq4kWb8" target="_blank" class="btn map">
-                📍 Open in Google Maps
-            </a>
-        </div>
+<div class="qr-box">
+<h3>📱 Scan QR to Contact</h3>
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/917974162295">
+</div>
 
-        <footer>© 2026 Bhargava Education Sphere</footer>
-    </div>
+<!-- ADMISSION FORM -->
+<div class="form-box">
+<h3>📝 Admission Enquiry</h3>
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Student Name" required>
+<input type="text" id="class" placeholder="Class" required>
+<input type="tel" id="phone" placeholder="Parent Mobile" required>
+<select id="type">
+<option>Coaching</option>
+<option>Home Tuition</option>
+</select>
+<button type="submit">Submit on WhatsApp</button>
+</form>
+</div>
 
-    <!-- HOME TUITION -->
-    <div class="side-card">
-        <h2>🏠 Home Tuition Group</h2>
-        <p>Experienced & verified teachers</p>
+</div>
+</div>
 
-        <div class="list">
-            ✔ Classes: <strong>2nd – 10th</strong><br>
-            ✔ All Subjects Covered<br>
-            ✔ Personal Home Tutor<br>
-            ✔ Regular Tests & Feedback
-        </div>
-
-        <div class="highlight">
-            Available in Guna City
-        </div>
-
-        <a href="https://wa.me/917974162295?text=Hello,%20I%20want%20to%20book%20a%20home%20tutor%20for%20my%20child."
-           class="book-btn" target="_blank">
-            📝 Book Home Tutor
-        </a>
-    </div>
+<div class="side-card">
+<h2>🏠 Home Tuition Group</h2>
+<p>Best Home Tuition Service in Guna</p>
+<div class="highlight">
+✔ Male & Female Tutors Available<br>
+✔ Multiple Experienced Teachers<br>
+✔ All Subjects (2nd – 10th)<br>
+✔ Regular Tests & Feedback
+</div>
+<a href="https://wa.me/917974162295" class="book-btn">📝 Book Home Tutor</a>
+</div>
 
 </div>
 
-<a href="https://wa.me/917974162295" class="floating-wa" target="_blank">💬</a>
+<a href="https://wa.me/917974162295" class="floating-wa">💬</a>
+
+<script>
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let cls=document.getElementById("class").value;
+let phone=document.getElementById("phone").value;
+let type=document.getElementById("type").value;
+
+let msg=`Admission Enquiry%0AName: ${name}%0AClass: ${cls}%0APhone: ${phone}%0AType: ${type}`;
+window.open("https://wa.me/917974162295?text="+msg,"_blank");
+}
+</script>
 
 </body>
 </html>
