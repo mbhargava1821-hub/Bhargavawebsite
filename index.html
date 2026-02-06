@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bhargava Education Sphere – Best Science Coaching in Guna</title>
 
 <style>
@@ -13,30 +12,22 @@
 }
 
 html{scroll-behavior:smooth;}
-
 body{
 margin:0;font-family:Segoe UI,Arial;
 background:linear-gradient(135deg,#e0e7ff,#f8f9ff);
 }
 
 .banner{
-width:100%;
-height:260px;
+width:100%;height:260px;
 background:url("https://mbhargava1821-hub.github.io/Bhargavawebsite/banner.jpg") center/cover no-repeat;
 }
 
-.container{
-max-width:950px;
-margin:auto;
-padding:15px;
-}
+.container{max-width:950px;margin:auto;padding:15px;}
 
 .card{
-background:white;
-border-radius:22px;
+background:white;border-radius:22px;
 box-shadow:0 20px 40px rgba(0,0,0,0.2);
-overflow:hidden;
-margin-bottom:20px;
+overflow:hidden;margin-bottom:20px;
 }
 
 .header{
@@ -58,24 +49,20 @@ border:4px solid var(--blue1);object-fit:cover;
 
 .science-focus{
 background:linear-gradient(135deg,#ff9f1a,#ff3838);
-color:white;
-padding:20px;
-border-radius:18px;
-font-size:20px;
-font-weight:800;
-margin:15px;
-text-align:center;
+color:white;padding:20px;border-radius:18px;
+font-size:20px;font-weight:800;
+margin:15px;text-align:center;
 }
 
 .limited{
-color:yellow;
-font-size:18px;
-font-weight:bold;
+color:yellow;font-size:18px;font-weight:bold;
 animation:blink 1s infinite;
 }
 @keyframes blink{0%{opacity:1;}50%{opacity:0;}100%{opacity:1;}}
 
-.box,.address,.map-box{background:#eef4ff;padding:14px;border-radius:12px;margin:12px;}
+.box,.address,.map-box{
+background:#eef4ff;padding:14px;border-radius:12px;margin:12px;
+}
 
 .btn{
 display:block;text-align:center;padding:15px;
@@ -88,41 +75,34 @@ text-decoration:none;margin:10px;
 .map{background:var(--map);}
 
 .form-box{
-background:#f1f2f6;
-padding:15px;
-border-radius:14px;
-margin:15px;
+background:#f1f2f6;padding:15px;
+border-radius:14px;margin:15px;
 }
 .form-box input,.form-box select{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:8px;
-border:1px solid #ccc;
+width:100%;padding:10px;margin-bottom:10px;
+border-radius:8px;border:1px solid #ccc;
 }
 .form-box button{
-background:#00cec9;
-border:none;
-padding:12px;
-width:100%;
-border-radius:10px;
-font-weight:bold;
+background:#00cec9;border:none;
+padding:12px;width:100%;
+border-radius:10px;font-weight:bold;
 }
 
 .home-card{
 background:linear-gradient(135deg,#ff6b6b,#feca57);
-color:#2d3436;
-border-radius:22px;
-padding:20px;
-text-align:center;
-border:3px dashed #fff;
-margin:20px;
+color:#2d3436;border-radius:22px;
+padding:20px;text-align:center;
+border:3px dashed #fff;margin:20px;
 }
 .highlight{
 background:rgba(255,255,255,0.7);
-padding:12px;
-border-radius:14px;
-margin:12px 0;
+padding:12px;border-radius:14px;margin:12px 0;
+}
+
+.thankyou{
+display:none;background:#dff9fb;color:#130f40;
+padding:15px;border-radius:12px;
+margin-top:15px;text-align:center;font-weight:bold;
 }
 </style>
 </head>
@@ -133,6 +113,7 @@ margin:12px 0;
 
 <div class="container">
 
+<!-- MAIN CARD -->
 <div class="card">
 <div class="header">
 <div class="logo">
@@ -169,13 +150,12 @@ margin:12px 0;
 <a href="https://maps.app.goo.gl/tAGsqweQiZewN6w98" class="btn map" target="_blank">📍 Open in Google Maps</a>
 
 <div class="map-box">
-<iframe
-src="https://www.google.com/maps?q=https://maps.app.goo.gl/tAGsqweQiZewN6w98&output=embed"
-width="100%" height="220" style="border:0;" loading="lazy">
-</iframe>
+<iframe src="https://www.google.com/maps?q=https://maps.app.goo.gl/tAGsqweQiZewN6w98&output=embed"
+width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 </div>
 </div>
 
+<!-- HOME TUITION -->
 <div class="home-card">
 <h2>🏠 HOME TUITION AVAILABLE</h2>
 <p><b>Best Home Tuition Service in Guna</b></p>
@@ -187,41 +167,48 @@ width="100%" height="220" style="border:0;" loading="lazy">
 </div>
 </div>
 
+<!-- REGISTRATION FORM -->
 <div class="form-box" id="registration">
 <h2>📝 Online Registration Form</h2>
 
 <form onsubmit="registerWhatsApp(); return false;">
 <input type="text" id="sname" placeholder="Student Name" required>
-
 <select id="prevclass" required>
 <option value="">Select Previous Class</option>
-<option>9th</option>
-<option>10th</option>
+<option>9th</option><option>10th</option>
 </select>
-
 <select id="adclass" required>
 <option value="">Select Admission Class</option>
-<option>9th</option>
-<option>10th</option>
+<option>9th</option><option>10th</option>
 </select>
-
 <input type="number" id="percent" placeholder="Percentage in Last Class" required>
 <input type="tel" id="pmobile" placeholder="Parent Mobile" required>
 <input type="tel" id="smobile" placeholder="Student Mobile (Optional)">
-
 <button type="submit">Register on WhatsApp</button>
 </form>
 
-<div id="thankyou" style="display:none;
-background:#dff9fb;
-color:#130f40;
-padding:15px;
-border-radius:12px;
-margin-top:15px;
-text-align:center;
-font-weight:bold;">
-✅ Thank you for registering!<br>
-Our team will contact you shortly.
+<div id="thankyouReg" class="thankyou">
+✅ Registration sent successfully!<br>
+We will contact you soon.
+</div>
+</div>
+
+<!-- INQUIRY FORM -->
+<div class="form-box">
+<h2>📞 Inquiry Form</h2>
+
+<form onsubmit="enquiryWhatsApp(); return false;">
+<input type="text" id="ename" placeholder="Your Name" required>
+<input type="tel" id="ephone" placeholder="Mobile Number" required>
+<select id="etype">
+<option>Coaching</option>
+<option>Home Tuition</option>
+</select>
+<button type="submit">Send Inquiry</button>
+</form>
+
+<div id="thankyouEnq" class="thankyou">
+✅ Inquiry sent successfully!
 </div>
 </div>
 
@@ -229,29 +216,33 @@ Our team will contact you shortly.
 
 <script>
 function registerWhatsApp(){
-let n = document.getElementById("sname").value;
-let p = document.getElementById("prevclass").value;
-let a = document.getElementById("adclass").value;
-let per = document.getElementById("percent").value;
-let pm = document.getElementById("pmobile").value;
-let sm = document.getElementById("smobile").value;
-
 let msg =
 `New Registration
-Student: ${n}
-Previous Class: ${p}
-Admission Class: ${a}
-Percentage: ${per}
-Parent Mobile: ${pm}
-Student Mobile: ${sm}`;
+Student: ${sname.value}
+Previous Class: ${prevclass.value}
+Admission Class: ${adclass.value}
+Percentage: ${percent.value}
+Parent Mobile: ${pmobile.value}
+Student Mobile: ${smobile.value}`;
 
-window.open(
-"https://wa.me/917974162295?text=" + encodeURIComponent(msg),
-"_blank"
-);
+window.location.href =
+"https://wa.me/917974162295?text=" + encodeURIComponent(msg);
 
-document.getElementById("thankyou").style.display = "block";
+document.getElementById("thankyouReg").style.display="block";
 document.querySelector("#registration form").reset();
+}
+
+function enquiryWhatsApp(){
+let msg =
+`New Inquiry
+Name: ${ename.value}
+Mobile: ${ephone.value}
+Type: ${etype.value}`;
+
+window.location.href =
+"https://wa.me/917974162295?text=" + encodeURIComponent(msg);
+
+document.getElementById("thankyouEnq").style.display="block";
 }
 </script>
 
