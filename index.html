@@ -10,7 +10,6 @@
 :root{
 --blue1:#004a99;--blue2:#0066cc;
 --wa:#25D366;--map:#34a853;
---card:#ffffff;--text:#2d3436;
 }
 
 html{scroll-behavior:smooth;}
@@ -65,7 +64,6 @@ border-radius:18px;
 font-size:20px;
 font-weight:800;
 margin:15px;
-box-shadow:0 0 20px rgba(255,56,56,0.6);
 text-align:center;
 }
 
@@ -79,17 +77,36 @@ animation:blink 1s infinite;
 
 .box,.address,.map-box{background:#eef4ff;padding:14px;border-radius:12px;margin:12px;}
 
-.btn{display:block;text-align:center;padding:15px;border-radius:14px;font-size:16px;font-weight:600;color:white;text-decoration:none;margin:10px;}
-.call{background:var(--blue1);} 
-.wa{background:var(--wa);} 
+.btn{
+display:block;text-align:center;padding:15px;
+border-radius:14px;font-size:16px;
+font-weight:600;color:white;
+text-decoration:none;margin:10px;
+}
+.call{background:var(--blue1);}
+.wa{background:var(--wa);}
 .map{background:var(--map);}
 
-.form-box{background:#f1f2f6;padding:15px;border-radius:14px;margin:15px;}
+.form-box{
+background:#f1f2f6;
+padding:15px;
+border-radius:14px;
+margin:15px;
+}
 .form-box input,.form-box select{
-width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 .form-box button{
-background:#00cec9;border:none;padding:12px;width:100%;border-radius:10px;font-weight:bold;
+background:#00cec9;
+border:none;
+padding:12px;
+width:100%;
+border-radius:10px;
+font-weight:bold;
 }
 
 .home-card{
@@ -101,23 +118,28 @@ text-align:center;
 border:3px dashed #fff;
 margin:20px;
 }
-.highlight{background:rgba(255,255,255,0.7);padding:12px;border-radius:14px;margin:12px 0;}
-
+.highlight{
+background:rgba(255,255,255,0.7);
+padding:12px;
+border-radius:14px;
+margin:12px 0;
+}
 </style>
 </head>
 
 <body>
 
-<!-- FULL BANNER -->
 <div class="banner"></div>
 
 <div class="container">
 
 <div class="card">
 <div class="header">
-<div class="logo"><img src="https://mbhargava1821-hub.github.io/Bhargavawebsite/logo.png"></div>
+<div class="logo">
+<img src="https://mbhargava1821-hub.github.io/Bhargavawebsite/logo.png">
+</div>
 <h1>Bhargava Education Sphere</h1>
-<p><b>Best Science Coaching <b/> in Guna</p>
+<p><b>Best Science Coaching</b> in Guna</p>
 </div>
 
 <div class="science-focus">
@@ -134,7 +156,11 @@ margin:20px;
 <p>Science Specialist</p>
 </div>
 
-<div class="box">🎓 Classes: 5th – 10th (All Subjects) <br>🎓Class 9th and 10th (science)</div>
+<div class="box">
+🎓 Classes: 5th – 10th (All Subjects)<br>
+🎓 Class 9th & 10th (Science)
+</div>
+
 <div class="address">📍 Back of Ganesh Garden, Krishnani Nagar, Guna</div>
 <div class="address">⏰ Mon – Sat: 4:00 PM – 8:00 PM</div>
 
@@ -143,8 +169,10 @@ margin:20px;
 <a href="https://maps.app.goo.gl/tAGsqweQiZewN6w98" class="btn map" target="_blank">📍 Open in Google Maps</a>
 
 <div class="map-box">
-<iframe src="https://www.google.com/maps?q=https://maps.app.goo.gl/tAGsqweQiZewN6w98&output=embed"
-width="100%" height="220" style="border:0;" loading="lazy"></iframe>
+<iframe
+src="https://www.google.com/maps?q=https://maps.app.goo.gl/tAGsqweQiZewN6w98&output=embed"
+width="100%" height="220" style="border:0;" loading="lazy">
+</iframe>
 </div>
 </div>
 
@@ -161,8 +189,10 @@ width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 
 <div class="form-box" id="registration">
 <h2>📝 Online Registration Form</h2>
+
 <form onsubmit="registerWhatsApp(); return false;">
 <input type="text" id="sname" placeholder="Student Name" required>
+
 <select id="prevclass" required>
 <option value="">Select Previous Class</option>
 <option>9th</option>
@@ -174,13 +204,14 @@ width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 <option>9th</option>
 <option>10th</option>
 </select>
+
 <input type="number" id="percent" placeholder="Percentage in Last Class" required>
-<input type="tel" id="smobile" placeholder="Parent Mobile" required>
+<input type="tel" id="pmobile" placeholder="Parent Mobile" required>
 <input type="tel" id="smobile" placeholder="Student Mobile (Optional)">
 
 <button type="submit">Register on WhatsApp</button>
 </form>
-</div>
+
 <div id="thankyou" style="display:none;
 background:#dff9fb;
 color:#130f40;
@@ -189,58 +220,38 @@ border-radius:12px;
 margin-top:15px;
 text-align:center;
 font-weight:bold;">
-✅ Thank you for registering!  
+✅ Thank you for registering!<br>
 Our team will contact you shortly.
 </div>
-
-
-<div class="form-box">
-<h3>📞 Home Tuition / General Enquiry</h3>
-<form onsubmit="enquiryWhatsApp(); return false;">
-<input type="text" id="ename" placeholder="Name" required>
-<input type="tel" id="ephone" placeholder="Mobile" required>
-<select id="etype"><option>Coaching</option><option>Home Tuition</option></select>
-<button type="submit">Send Enquiry</button>
-</form>
 </div>
-<div id="thankyou" style="display:none;
-background:#dff9fb;
-color:#130f40;
-padding:15px;
-border-radius:12px;
-margin-top:15px;
-text-align:center;
-font-weight:bold;">
-✅ Thank you for registering!  
-Our team will contact you shortly.
-</div>
-
 
 </div>
 
 <script>
 function registerWhatsApp(){
-let n=document.getElementById("sname").value;
-let p=document.getElementById("prevclass").value;
-let a=document.getElementById("adclass").value;
-let per=document.getElementById("percent").value;
-let sm=document.getElementById("smobile").value;
-let pm=document.getElementById("pmobile").value;
+let n = document.getElementById("sname").value;
+let p = document.getElementById("prevclass").value;
+let a = document.getElementById("adclass").value;
+let per = document.getElementById("percent").value;
+let pm = document.getElementById("pmobile").value;
+let sm = document.getElementById("smobile").value;
 
-let msg=`New Registration%0AStudent: ${n}%0APrevious Class: ${p}%0AAdmission Class: ${a}%0APercentage: ${per}%0AStudent Mobile: ${sm}%0AParent Mobile: ${pm}`;
+let msg =
+`New Registration
+Student: ${n}
+Previous Class: ${p}
+Admission Class: ${a}
+Percentage: ${per}
+Parent Mobile: ${pm}
+Student Mobile: ${sm}`;
 
-window.open("https://wa.me/917974162295?text="+msg,"_blank");
+window.open(
+"https://wa.me/917974162295?text=" + encodeURIComponent(msg),
+"_blank"
+);
 
-// show thank you message
-document.getElementById("thankyou").style.display="block";
-
-// clear form
-document.getElementById("sname").value="";
-document.getElementById("prevclass").value="";
-document.getElementById("adclass").value="";
-document.getElementById("percent").value="";
-document.getElementById("smobile").value="";
-document.getElementById("pmobile").value="";
+document.getElementById("thankyou").style.display = "block";
+document.querySelector("#registration form").reset();
 }
 </script>
 
