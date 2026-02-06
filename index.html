@@ -117,7 +117,7 @@ margin:20px;
 <div class="header">
 <div class="logo"><img src="https://mbhargava1821-hub.github.io/Bhargavawebsite/logo.png"></div>
 <h1>Bhargava Education Sphere</h1>
-<p>Best Science Coaching in Guna</p>
+<p><b>Best Science Coaching <b/> in Guna</p>
 </div>
 
 <div class="science-focus">
@@ -181,6 +181,18 @@ width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 <button type="submit">Register on WhatsApp</button>
 </form>
 </div>
+<div id="thankyou" style="display:none;
+background:#dff9fb;
+color:#130f40;
+padding:15px;
+border-radius:12px;
+margin-top:15px;
+text-align:center;
+font-weight:bold;">
+✅ Thank you for registering!  
+Our team will contact you shortly.
+</div>
+
 
 <div class="form-box">
 <h3>📞 Home Tuition / General Enquiry</h3>
@@ -191,18 +203,44 @@ width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 <button type="submit">Send Enquiry</button>
 </form>
 </div>
+<div id="thankyou" style="display:none;
+background:#dff9fb;
+color:#130f40;
+padding:15px;
+border-radius:12px;
+margin-top:15px;
+text-align:center;
+font-weight:bold;">
+✅ Thank you for registering!  
+Our team will contact you shortly.
+</div>
+
 
 </div>
 
 <script>
 function registerWhatsApp(){
-let n=sname.value,p=prevclass.value,a=adclass.value,per=percent.value,sm=smobile.value,pm=pmobile.value;
-window.open("https://wa.me/917974162295?text="+
-`New Registration%0AStudent: ${n}%0APrevious Class: ${p}%0AAdmission Class: ${a}%0APercentage: ${per}%0AStudent Mobile: ${sm}%0AParent Mobile: ${pm}`);
-}
-function enquiryWhatsApp(){
-window.open("https://wa.me/917974162295?text="+
-`Enquiry%0AName: ${ename.value}%0APhone: ${ephone.value}%0AType: ${etype.value}`);
+let n=document.getElementById("sname").value;
+let p=document.getElementById("prevclass").value;
+let a=document.getElementById("adclass").value;
+let per=document.getElementById("percent").value;
+let sm=document.getElementById("smobile").value;
+let pm=document.getElementById("pmobile").value;
+
+let msg=`New Registration%0AStudent: ${n}%0APrevious Class: ${p}%0AAdmission Class: ${a}%0APercentage: ${per}%0AStudent Mobile: ${sm}%0AParent Mobile: ${pm}`;
+
+window.open("https://wa.me/917974162295?text="+msg,"_blank");
+
+// show thank you message
+document.getElementById("thankyou").style.display="block";
+
+// clear form
+document.getElementById("sname").value="";
+document.getElementById("prevclass").value="";
+document.getElementById("adclass").value="";
+document.getElementById("percent").value="";
+document.getElementById("smobile").value="";
+document.getElementById("pmobile").value="";
 }
 </script>
 
