@@ -124,7 +124,7 @@ margin:20px;
 🔥 9th & 10th SCIENCE COACHING 🔥<br>
 (Physics • Chemistry • Biology)<br>
 <a href="#registration" style="text-decoration:none;">
-<span class="limited">⚠ LIMITED SEATS ⚠</span>
+<span class="limited">⚠ ENROLL NOW ⚠</span>
 </a>
 </div>
 
@@ -163,17 +163,27 @@ width="100%" height="220" style="border:0;" loading="lazy"></iframe>
 <h2>📝 Online Registration Form</h2>
 <form onsubmit="registerWhatsApp(); return false;">
 <input type="text" id="sname" placeholder="Student Name" required>
-<select id="prevclass" required><option>9th</option><option>10th</option></select>
-<select id="adclass" required><option>9th</option><option>10th</option></select>
+<select id="prevclass" required>
+<option value="">Select Previous Class</option>
+<option>9th</option>
+<option>10th</option>
+</select>
+
+<select id="adclass" required>
+<option value="">Select Admission Class</option>
+<option>9th</option>
+<option>10th</option>
+</select>
 <input type="number" id="percent" placeholder="Percentage in Last Class" required>
-<input type="tel" id="smobile" placeholder="Student Mobile" required>
-<input type="tel" id="pmobile" placeholder="Parent Mobile" required>
+<input type="tel" id="smobile" placeholder="Parent Mobile" required>
+<input type="tel" id="smobile" placeholder="Student Mobile (Optional)">
+
 <button type="submit">Register on WhatsApp</button>
 </form>
 </div>
 
 <div class="form-box">
-<h3>📞 General Enquiry</h3>
+<h3>📞 Home Tuition / General Enquiry</h3>
 <form onsubmit="enquiryWhatsApp(); return false;">
 <input type="text" id="ename" placeholder="Name" required>
 <input type="tel" id="ephone" placeholder="Mobile" required>
