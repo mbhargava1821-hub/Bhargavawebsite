@@ -6,142 +6,194 @@
 
 <title>Bhargava Education Sphere – Best Science Coaching in Guna</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
---blue1:#004a99;
---blue2:#0066cc;
+--blue1:#0a3d62;
+--blue2:#1e90ff;
+--accent:#ff9f1a;
 --wa:#25D366;
 --map:#34a853;
 }
 
+*{box-sizing:border-box}
+
 body{
 margin:0;
-font-family:Segoe UI, Arial;
-background:linear-gradient(135deg,#e0e7ff,#f8f9ff);
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#e9f0ff,#ffffff);
+color:#222;
 }
 
 .banner{
-width:100%;
-height:260px;
+height:280px;
 background:url("banner.jpg") center/cover no-repeat;
+position:relative;
+}
+
+.banner::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.6));
 }
 
 .container{
-max-width:950px;
-margin:auto;
+max-width:1000px;
+margin:-80px auto 0;
 padding:15px;
+position:relative;
 }
 
 .card{
-background:#fff;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+border-radius:26px;
+box-shadow:0 30px 60px rgba(0,0,0,.15);
 overflow:hidden;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .header{
 background:linear-gradient(135deg,var(--blue1),var(--blue2));
 color:white;
-padding:20px;
+padding:30px 20px;
 text-align:center;
 }
 
 .logo{
-width:90px;height:90px;border-radius:50%;
-background:white;margin:10px auto;overflow:hidden;
+width:100px;height:100px;
+border-radius:50%;
+background:white;
+margin:auto;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
 }
 .logo img{width:100%;height:100%;object-fit:cover;}
 
-.teacher{text-align:center;margin:10px;}
-.teacher img{
-width:140px;height:140px;border-radius:50%;
-border:4px solid var(--blue1);
-}
+.header h1{margin:15px 0 5px;font-size:30px}
+.header p{margin:0;font-weight:300}
 
 .science-focus{
-background:linear-gradient(135deg,#ff9f1a,#ff3838);
+margin:20px;
+padding:25px;
+border-radius:20px;
+background:linear-gradient(135deg,#ff6b6b,#feca57);
 color:white;
-padding:20px;
-border-radius:18px;
-font-size:20px;
-font-weight:bold;
-margin:15px;
 text-align:center;
+font-size:22px;
+font-weight:700;
 }
 
 .enroll-btn{
 display:inline-block;
-margin-top:12px;
+margin-top:15px;
+padding:12px 28px;
 background:#000;
 color:#fff;
-padding:10px 20px;
-border-radius:25px;
+border-radius:30px;
 text-decoration:none;
 font-size:16px;
+transition:.3s;
+}
+.enroll-btn:hover{transform:scale(1.05)}
+
+.teacher{text-align:center;margin:20px}
+.teacher img{
+width:150px;height:150px;
+border-radius:50%;
+border:5px solid var(--blue2);
+}
+.teacher h3{margin:10px 0 0}
+.teacher p{margin:5px 0;color:#555}
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+padding:20px;
 }
 
-.box,.address,.map-box{
-background:#eef4ff;
-padding:14px;
-border-radius:12px;
-margin:12px;
+.info div{
+background:#f4f8ff;
+padding:15px;
+border-radius:14px;
+font-size:14px;
 }
 
 .btn{
 display:block;
+padding:16px;
+border-radius:16px;
+font-weight:600;
 text-align:center;
-padding:15px;
-border-radius:14px;
-font-size:16px;
-font-weight:bold;
 color:white;
 text-decoration:none;
-margin:10px;
-}
-.call{background:var(--blue1);}
-.wa{background:var(--wa);}
-.map{background:var(--map);}
-
-.form-box{
-background:#f1f2f6;
-padding:15px;
-border-radius:14px;
-margin:15px;
-}
-.form-box input,.form-box select{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-.form-box button{
-background:#00cec9;
-border:none;
-padding:12px;
-width:100%;
-border-radius:10px;
+margin:10px 20px;
 font-size:16px;
-font-weight:bold;
+}
+.call{background:var(--blue1)}
+.wa{background:var(--wa)}
+.map{background:var(--map)}
+
+.map-box{
+margin:20px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .home-card{
-background:linear-gradient(135deg,#ff6b6b,#feca57);
-border-radius:22px;
-padding:20px;
+margin:25px;
+padding:25px;
+border-radius:26px;
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+color:white;
 text-align:center;
-margin:20px;
+}
+
+.home-card h2{margin-top:0}
+
+.form-box{
+background:#f7f9ff;
+margin:25px;
+padding:25px;
+border-radius:24px;
+box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.form-box h2,.form-box h3{text-align:center}
+
+.form-box input,.form-box select{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:12px;
+border:1px solid #ccc;
+font-family:'Poppins';
+}
+
+.form-box button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#00cec9,#0984e3);
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
 }
 
 #thankyou{
 display:none;
 background:#dff9fb;
-padding:15px;
-border-radius:12px;
-margin:15px;
+padding:18px;
+border-radius:16px;
+margin:20px;
 text-align:center;
-font-weight:bold;
+font-weight:600;
 }
 </style>
 </head>
@@ -156,7 +208,7 @@ font-weight:bold;
 <div class="header">
 <div class="logo"><img src="logo.png"></div>
 <h1>Bhargava Education Sphere</h1>
-<p><b>Best Science Coaching in Guna</b></p>
+<p>Best Science Coaching in Guna</p>
 </div>
 
 <div class="science-focus">
@@ -171,37 +223,36 @@ Physics • Chemistry • Biology<br>
 <p>Science Specialist</p>
 </div>
 
-<div class="box">🎓Class 9th and 10th SCIENCE 🎓 Classes: 5th – 10th (All Subjects) </div>
-<div class="address">📍 Back of Ganesh Garden, Krishnani Nagar, Bhullanpura, Guna</div>
-<div class="address">⏰ Mon – Sat: 4:00 PM – 8:00 PM</div>
+<div class="info">
+<div>🎓 Classes: 5th – 10th (All Subjects)</div>
+<div>📍 Back of Ganesh Garden, Krishnani Nagar, Guna</div>
+<div>⏰ Mon – Sat: 4:00 PM – 8:00 PM</div>
+</div>
 
 <a href="tel:7974162295" class="btn call">📞 Call Now</a>
 <a href="https://wa.me/917974162295" class="btn wa">💬 WhatsApp</a>
 <a href="https://maps.app.goo.gl/8tifUVnLjLPQYDmJ8" target="_blank" class="btn map">📍 Open Map</a>
 
 <div class="map-box">
-<iframe
-src="https://www.google.com/maps?q=Bhargava+Education+Sphere+Guna&output=embed"
-width="100%" height="220" style="border:0;" loading="lazy">
-</iframe>
+<iframe src="https://www.google.com/maps?q=Bhargava+Education+Sphere+Guna&output=embed"
+width="100%" height="260" style="border:0" loading="lazy"></iframe>
 </div>
 </div>
 
 <div class="home-card">
 <h2>🏠 HOME TUITION AVAILABLE</h2>
 <p>
-✔ Classes 2nd – 10th (All Subjects)<br>
+✔ Classes 5th – 10th<br>
+✔ All Subjects<br>
 ✔ Male & Female Teachers Available<br>
 ✔ Experienced & Verified Faculty<br>
-✔ Flexible Timings<br>
-✔ Personal Attention at Home
+✔ Flexible & Safe Learning at Home
 </p>
 </div>
 
-<!-- REGISTRATION FORM -->
 <div class="form-box" id="register">
 <h2>📝 Registration Form</h2>
-<form onsubmit="registerWhatsApp(); return false;">
+<form onsubmit="registerWhatsApp();return false;">
 <input id="sname" placeholder="Student Name" required>
 
 <select id="prevclass" required>
@@ -220,14 +271,14 @@ width="100%" height="220" style="border:0;" loading="lazy">
 <input id="percent" placeholder="Last Class Percentage" required>
 <input id="pmobile" placeholder="Parent Mobile" required>
 <input id="smobile" placeholder="Student Mobile (Optional)">
-<button type="submit">Register on WhatsApp</button>
+
+<button>Register on WhatsApp</button>
 </form>
 </div>
 
-<!-- INQUIRY FORM -->
 <div class="form-box">
 <h3>📞 General Inquiry</h3>
-<form onsubmit="enquiryWhatsApp(); return false;">
+<form onsubmit="enquiryWhatsApp();return false;">
 <input id="ename" placeholder="Name" required>
 <input id="ephone" placeholder="Mobile" required>
 <select id="etype">
@@ -235,7 +286,7 @@ width="100%" height="220" style="border:0;" loading="lazy">
 <option>Home Tuition</option>
 <option>General</option>
 </select>
-<button type="submit">Send Inquiry</button>
+<button>Send Inquiry</button>
 </form>
 </div>
 
@@ -253,7 +304,7 @@ Percentage: ${percent.value}
 Parent Mobile: ${pmobile.value}
 Student Mobile: ${smobile.value}`;
 window.open("https://wa.me/917974162295?text="+encodeURIComponent(msg));
-document.getElementById("thankyou").style.display="block";
+thankyou.style.display="block";
 }
 
 function enquiryWhatsApp(){
@@ -262,7 +313,7 @@ Name: ${ename.value}
 Mobile: ${ephone.value}
 Type: ${etype.value}`;
 window.open("https://wa.me/917974162295?text="+encodeURIComponent(msg));
-document.getElementById("thankyou").style.display="block";
+thankyou.style.display="block";
 }
 </script>
 
