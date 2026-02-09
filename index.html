@@ -26,10 +26,9 @@ background:linear-gradient(135deg,#e9f0ff,#ffffff);
 color:#222;
 }
 
-/* ✅ FIXED BANNER */
 .banner{
-min-height:75vh;          /* KEY FIX */
-background:url("banner.jpg") center top/cover no-repeat;
+height:280px;
+background:url("banner.jpg") center/cover no-repeat;
 position:relative;
 }
 
@@ -37,12 +36,12 @@ position:relative;
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,.25),rgba(0,0,0,.6));
+background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.6));
 }
 
 .container{
 max-width:1000px;
-margin:-80px auto 0;      /* overlap KEPT */
+margin:-80px auto 0;
 padding:15px;
 position:relative;
 }
@@ -194,14 +193,6 @@ margin:20px;
 text-align:center;
 font-weight:600;
 }
-
-/* 📱 MOBILE ONLY – banner fix only */
-@media(max-width:768px){
-.banner{
-min-height:85vh;   /* ensures full banner visibility */
-background-position:center top;
-}
-}
 </style>
 </head>
 
@@ -231,7 +222,7 @@ Physics • Chemistry • Biology<br>
 </div>
 
 <div class="info">
-<div>🎓 Class 5th – 10th (All Subjects)</div>
+<div>🎓 Classes 5th – 10th (All Subjects)</div>
 <div>📍 Back of Ganesh Garden, Krishnani Nagar, Guna</div>
 <div>⏰ Mon – Sat: 4:00 PM – 8:00 PM</div>
 </div>
